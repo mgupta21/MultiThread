@@ -1,11 +1,11 @@
 package com.java.multiThread.demo5;
 
-// Thread Synchronization : Method 2 : Using synchronization keyword
+// Thread Synchronization : Method 2 : Using synchronized keyword
 
 public class App {
 
     // No need to declare a variable volatile, as count variable is run in
-    // synchronized block which guarantees  count's current state is visible to
+    // synchronized block which guarantees count's current state is visible to
     // all threads.
     private int count = 0;
 

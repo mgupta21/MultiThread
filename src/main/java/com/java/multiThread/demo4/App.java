@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 // Java main() code is run in a thread. Whenever we call the start() of thread
 // then java creates another thread. so 2 threads namely main() and start()
-// method are executed concurrently
+// are executed concurrently
 public class App {
 
     public static void main (String[] args) {
