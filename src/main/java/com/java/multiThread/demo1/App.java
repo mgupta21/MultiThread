@@ -5,12 +5,12 @@ package com.java.multiThread.demo1;
 
 class Runner extends Thread {
 
-    public void run (){
-        for (int i=0; i<10; i++){
+    public void run() {
+        for (int i = 0; i < 10; i++) {
             System.out.println("hello " + i);
-            try{
+            try {
                 Thread.sleep(100);
-            }catch (InterruptedException ex){
+            } catch (InterruptedException ex) {
                 System.out.println(ex.getMessage());
             }
         }
@@ -21,7 +21,7 @@ class Runner extends Thread {
 
 public class App {
 
-    public static void main( String[] args ) {
+    public static void main(String[] args) {
 
         Runner runner1 = new Runner();
         // Run runner using start() method to ensure program is run in its own thread. If we call run() directly

@@ -21,11 +21,12 @@ public class Worker {
         long start = System.currentTimeMillis();
 
         Thread t1 = new Thread(new Runnable() {
-        public void run() {
+            public void run() {
 
                 try {
                     process();
-                } catch (InterruptedException e) {}
+                } catch (InterruptedException e) {
+                }
             }
         });
 
@@ -34,7 +35,8 @@ public class Worker {
 
                 try {
                     process();
-                } catch (InterruptedException e) {}
+                } catch (InterruptedException e) {
+                }
             }
         });
 
@@ -51,14 +53,14 @@ public class Worker {
 
         long end = System.currentTimeMillis();
 
-        System.out.println("Time Taken : " + (end-start));
+        System.out.println("Time Taken : " + (end - start));
         System.out.println("List1 : " + list1.size() + " List2 : " + list2.size());
 
     }
 
     public static /*synchronized*/ void stageOne() throws InterruptedException {
 
-        synchronized (lock1){
+        synchronized (lock1) {
             Thread.sleep(1);
             list1.add(random.nextInt(100));
         }
@@ -67,7 +69,7 @@ public class Worker {
 
     public static /*synchronized*/ void stageTwo() throws InterruptedException {
 
-        synchronized (list2){
+        synchronized (list2) {
             Thread.sleep(1);
             list2.add(random.nextInt(100));
         }
@@ -75,7 +77,7 @@ public class Worker {
     }
 
     public static void process() throws InterruptedException {
-        for (int i=0; i<1000; i++){
+        for (int i = 0; i < 1000; i++) {
             stageOne();
             stageTwo();
         }

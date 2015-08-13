@@ -15,7 +15,7 @@ public class App {
         // Thread pool recycles threads to avoid overhead needed to create new thread
         ExecutorService executorService = Executors.newFixedThreadPool(2);
 
-        for (int i = 0; i<5; i++){
+        for (int i = 0; i < 5; i++) {
             executorService.submit(new Processor(i));
         }
 
@@ -37,8 +37,8 @@ class Processor implements Runnable {
 
     private int id;
 
-    public Processor(int id){
-        this.id=id;
+    public Processor(int id) {
+        this.id = id;
     }
 
     public void run() {

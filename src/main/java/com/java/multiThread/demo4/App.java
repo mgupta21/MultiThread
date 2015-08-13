@@ -9,7 +9,7 @@ import java.util.Scanner;
 // are executed concurrently
 public class App {
 
-    public static void main (String[] args) {
+    public static void main(String[] args) {
 
         Processor proc1 = new Processor();
         proc1.start();
@@ -37,7 +37,7 @@ class Processor extends Thread {
     @Override
     public void run() {
 
-        while (isRunning){
+        while (isRunning) {
             System.out.println("hello");
 
             try {
@@ -50,7 +50,7 @@ class Processor extends Thread {
 
     }
 
-    public void shutdown(){
+    public void shutdown() {
         isRunning = false;
     }
 }
