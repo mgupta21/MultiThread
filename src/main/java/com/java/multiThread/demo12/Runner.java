@@ -10,12 +10,10 @@ import java.util.concurrent.locks.ReentrantLock;
  */
 public class Runner {
 
-    int count;
-
     // Alternative way to synchronize code without using synchronize keyword
     public Lock lock = new ReentrantLock();
-
     public Condition condition = lock.newCondition();
+    int count;
 
     public void increment() {
         for (int i = 0; i < 1000; i++) {

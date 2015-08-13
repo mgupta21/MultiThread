@@ -8,10 +8,9 @@ import java.util.Random;
  */
 public class Processor {
 
+    private final int LIMIT = 10;
     // arrayBlockingQueue was synchronized but not LinkedList
     private LinkedList<Integer> list = new LinkedList<Integer>();
-    private final int LIMIT = 10;
-
     private Object lock = new Object();
 
     public void produce() throws InterruptedException {
